@@ -89,6 +89,8 @@ function signOut() {
   });
 }
 
+
+
 function open_exercise(){
   window.open("detail.html?category=excercise", "_self");
 }
