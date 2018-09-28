@@ -31,22 +31,54 @@
   <div id="catefory_notice">
     <h1 id="category_selected"></h1></div>
 
-<div id="input_content_div"><input id="input_text" type="text" placeholder="게시판 글 내용 입력">
-<button type="button" id="content_register_button" onclick="register_content()">
+  <div id="input_content_div"><input id="input_text" type="text" placeholder="게시판 글 내용 입력">
+    <button type="button" id="content_register_button" onclick="register_content()">
 <div>
  글 등록
 </div>
 </button>
-</div>
+  </div>
+  <div id="addToDoView" style="display:none">
+    <div id="writingTransparentBorder"></div>
+    <div id="writingFormContainer">
+      <div id="ximgBox">
+        <img id="ximg" src="images/delete.png" onclick="CloseAddToDo()" alt="noaddtodoview">
+      </div>
+      <div id="signIn" display="clear">
+        <span>수정할 내용을 입력하세요.</span>
+        <div class="reg"> <label for="si_pw">내용 </label><input type="text" id="revise_content" /></div>
+        <span id="my_writer" style="display:none;"></span>
+        <span id="my_date" style="display:none;"></span>
+        <span id="my_number" style="display:none;"></span>
+        <div class="signupbtn"> <button type="button" id="revisebutton">
+                        <div>
+                          <a id="log-in" onclick="modify_coment()">Modify</a>
+                        </div>
+                   </button>
+          <button type="button" id="deletebutton">
+                                   <div>
+                                     <a id="log-in" onclick="del_coment()">Delete</a>
+                                   </div>
+                              </button>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
   <div id="table_div">
     <table id="list">
       <tr>
         <td id="write_writer">작성자</td>
         <td id="write_content">내용</td>
         <td id="write_time">작성 시간</td>
+        <td id="other">수정</td>
       </tr>
     </table>
   </div>
+
+
+
 </body>
 <footer><span id="copyright">© Copyright 2018 Jeon, Jang, Daeng </span></footer>
 
