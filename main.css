@@ -30,6 +30,43 @@
   margin-left:5px;
 }
 
+#catefory_notice{
+  text-align: center;
+  padding: 20px;
+}
+
+#table_div{
+  text-align: center;
+}
+
+table{
+  margin: auto;
+  width: 80%;
+  border-collapse: collapse;
+}
+td{
+  text-align: center;
+  height: 30px;
+  border: solid 1px white;
+}
+#write_writer{
+  width: 20%;
+}
+#write_content{
+  width:60%;
+}
+#write_time{
+  width: 20%;
+}
+#input_content_div{
+  text-align: center;
+  margin: 20px;
+  width: 100%;
+}
+#input_text{
+  width: 60%;
+}
+
 /*header bar*/
 #login_id{
 

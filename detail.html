@@ -1,16 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="main.css" rel="stylesheet" type="text/css" media="all">
   <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
-    <script src="detail.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="detail.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
   <title>Detail</title>
 </head>
+
 <body>
-  <div id="response_category"></div>
+  <div class="bgded overlay" style="background-image:url('images/demo/backgrounds/01.png');">
+    <!-- ################################################################################################ -->
+    <div class="wrapper row1">
+      <header id="header" class="hoc clear">
+        <!-- ################################################################################################ -->
+        <div id="logo" class="fl_left">
+          <h1><a href="index.html">Hobby_community</a></h1>
+
+
+        </div>
+      </header>
+    </div>
+  </div>
+  <div id="catefory_notice">
+    <h1 id="category_selected"></h1></div>
+
+<div id="input_content_div"><input id="input_text" type="text" placeholder="게시판 글 내용 입력">
+<button type="button" id="content_register_button" onclick="read_commentes()">
+<div>
+ 글 등록
+</div>
+</button>
+</div>
+  <div id="table_div">
+    <table>
+      <tr>
+        <td id="write_writer">작성자</td>
+        <td id="write_content">내용</td>
+        <td id="write_time">작성 시간</td>
+      </tr>
+    </table>
+  </div>
 </body>
+
 </html>
