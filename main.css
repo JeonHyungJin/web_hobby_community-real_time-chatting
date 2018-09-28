@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+@import url("framework.css");
+
+/* Header */
+
+#header{}
+#header #logo{margin:30px 0 0 0;}
+#header #logo h1{margin:0; padding:0; font-size:45px; display: inline;}
+
+/*logindata*/
+.logindata{
+  margin-bottom: 10px;
+  position: relative;
+  bottom: 5px;
+  left: 5px;
+  height: 25px;
+  width: 150px;
+}
+/*header btn*/
+.loginsignup{
+  width: 86px;
+  border-radius:5px;
+  background-clip:padding-box;
+  height: 27px;
+  position: relative;
+  bottom:2px;
+}
+#login{
+  margin-left:5px;
+}
+
+/*header bar*/
+#login_id{
+
+}
+/* Content Area
+--------------------------------------------------------------------------------------------------------------- */
+.container{padding:80px 0;}
+
+/* Rounded Corners
+--------------------------------------------------------------------------------------------------------------- */
+.btn, .icon, #footer input, #footer button, #backtotop, .faico a, .elements li{border-radius:10px; background-clip:padding-box;}
+
+/* Colours
+--------------------------------------------------------------------------------------------------------------- */
+body{color:#CBCBCB; background-color:#1A1A1A;}
+a{color:#FFAA31;}
+a:active, a:focus{background:transparent;}
+hr, .borderedbox{border-color:#D7D7D7;}
+label span{color:#FF0000; background-color:inherit;}
+input:focus, textarea:focus, *:required:focus{border-color:#56AED4;}
+.overlay{color:#FFFFFF; background-color:inherit;}
+.overlay::after{color:inherit; background-color:rgba(0,0,0,.55);}
+.btn, .btn.inverse:hover{color:#FFFFFF; background-color:#FFAA31; border-color:#FFAA31;}
+.btn:hover, .btn.inverse{color:inherit; background-color:transparent; border-color:inherit;}
+.icon{color:inherit; border-color:inherit;}
+a .icon:hover, article:hover a .icon{color:#FFFFFF; background-color:#FFAA31;}
+
+/* Rows */
+.row1{color:#FFFFFF; background-color:rgba(255,255,255,.4);}
+.row2, .row2 a{}
+.row3{color:#929292; background-color:#FFFFFF;}
+.row3 .heading{color:#474747;}
+.row4{color:#CBCBCB; background-color:#272727; border-color:#FFAA31;}
+.row5, .row5 a{color:#CBCBCB; background-color:#1A1A1A;}
+
+/* Header */
+#header #logo a{color:inherit;}
+
+
+/* Max Wrapper Width - Laptop, Desktop etc.
+--------------------------------------------------------------------------------------------------------------- */
+@media screen and (min-width:978px){
+	.hoc, .split{max-width:978px;}
+}
