@@ -121,3 +121,7 @@ function open_book(){
 function open_etc(){
   window.open("detail.html?category=etc", "_self");
 }
+
+function chatting() {
+  location.href="public/index.html";
+}
