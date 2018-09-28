@@ -86,7 +86,7 @@ function read_commentes(){
       console.log(contentArray[i].content);
     }
 
-    var list_ = d
+    var list_ = document.getElementById('list');
 
     for(var i = 0; i<obj_length;i++){
       var Box =  document.createElement("tr");
