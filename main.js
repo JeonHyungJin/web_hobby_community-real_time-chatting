@@ -112,6 +112,6 @@ function open_music(){
 function open_book(){
   window.open("detail.html?category=book", "_self");
 }
-function open_computer(){
-  window.open("detail.html?category=computer", "_self");
+function open_etc(){
+  window.open("detail.html?category=etc", "_self");
 }
