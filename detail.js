@@ -119,6 +119,16 @@ function read_commentes() {
       var td4 = document.createElement("td");
       var td5 = document.createElement("td");
 
+      var root_email = "root@gmail.com";
+      
+      if(user_email == root_email){
+        var mody_but = document.createElement("button");
+        mody_but.setAttribute("type", "button");
+        mody_but.setAttribute("value", "수정");
+        mody_but.style.height ="15px";
+        mody_but.setAttribute("onclick","show_modal(event)");
+        td4.appendChild(mody_but);
+      }
 
       if (contentArray[i].name == user_email) {
         var mody_but = document.createElement("button");
