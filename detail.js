@@ -67,19 +67,51 @@ function register_content() {
 }
 
 function read_commentes() {
-  contentArray = [];
+
+  var list_ = document.getElementById('list');
+
+
+
   var read_db_ref = database.ref().child(selected_category_page);
   read_db_ref.on('value', function(snapshot) {
+
+
+    $("#list").empty();
+    var l_Box = document.createElement("tr");
+    var l_td1 = document.createElement("td");
+    l_td1.innerHTML = "작성자";
+    l_td1.setAttribute("id", "write_writer");
+    var l_td2 = document.createElement("td");
+    l_td2.innerHTML = "내용";
+    l_td2.setAttribute("id", "write_content");
+    var l_td3 = document.createElement("td");
+    l_td3.innerHTML = "작성 시간";
+    l_td3.setAttribute("id", "write_time");
+    var l_td4 = document.createElement("td");
+    l_td4.innerHTML = "수정";
+    l_td4.setAttribute("id", "other");
+
+    l_Box.appendChild(l_td1);
+    l_Box.appendChild(l_td2);
+    l_Box.appendChild(l_td3);
+    l_Box.appendChild(l_td4);
+
+    list_.appendChild(l_Box);
+
     var obj = snapshot.val();
     var obj_length = Object.keys(obj).length;
+    console.log(obj_length);
 
+    contentArray = new Array();
     for (var i = 0; i < obj_length; i++) {
-      contentArray.push(obj[Object.keys(obj)[i]])
+      contentArray.push(obj[Object.keys(obj)[i]]);
+      console.log(contentArray.length);
     }
 
-    var list_ = document.getElementById('list');
 
-    for (var i = 0; i < obj_length; i++) {
+
+
+    for (var i = 0; i < contentArray.length; i++) {
       var Box = document.createElement("tr");
       var td1 = document.createElement("td");
       var td2 = document.createElement("td");
