@@ -21,8 +21,8 @@
 
   		    firebase.auth().createUserWithEmailAndPassword(id, pw)
   		            .then(function() {
-  		                alert("Signed Up!");
-  		                //location.href="./TP_2.html"; <- 회원가입 후 이동할 페이지
+  		                alert("회원 가입 완료!");
+  		                location.href="./main.html";
   		            })
   		            .catch(function(e) {
   		                $("#error #errmsg").html(e.message);
@@ -39,7 +39,7 @@
   	              .then(function() {
   	                  $("#signIn").hide();
   	                  $("#authorized").show();
-  	                  //location.href="./TP_2.html"; <-이동할 페이지
+                      location.href="./main.html";
   	              })
   	              .catch(function(e) {
   	                  lastWork = "signIn";
