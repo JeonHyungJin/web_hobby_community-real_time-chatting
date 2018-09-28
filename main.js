@@ -89,7 +89,13 @@ function signOut() {
   });
 }
 
+function Register(){
+  $("#addToDoView").show();
+}
 
+function CloseAddToDo(){
+  $("#addToDoView").css("display" ,"none");
+}
 
 function open_exercise(){
   window.open("detail.html?category=excercise", "_self");

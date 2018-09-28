@@ -9,11 +9,20 @@ var config = {
 };
 firebase.initializeApp(config);
 
+var contentArray = new Array();
 var database = firebase.database();
+var temp;
+var selected_category_page;
 
-var temp = location.href.split("?");
-data = temp[1].split("=");
-var selected_category_page = data[1];
+window.onload=function()
+{
+  temp = location.href.split("?");
+  data = temp[1].split("=");
+  selected_category_page = data[1];
+  read_commentes();
+}
+
+
 var user_email;
 var content_content;
 
@@ -64,6 +73,34 @@ function register_content(){
 function read_commentes(){
   var read_db_ref = database.ref().child(selected_category_page);
   read_db_ref.on('value', function(snapshot) {
-    console.log(snapshot.val());
+    var obj = snapshot.val();
+    var obj_length = Object.keys(obj).length;
+
+    for(var i = 0; i<obj_length;i++){
+      contentArray.push(obj[Object.keys(obj)[i]])
+    }
+
+    for(var i = 0; i<obj_length;i++){
+      console.log(contentArray[i].name);
+      console.log(contentArray[i].date);
+      console.log(contentArray[i].content);
+    }
+
+    var list_ = d
+
+    for(var i = 0; i<obj_length;i++){
+      var Box =  document.createElement("tr");
+      var td1 =  document.createElement("td");
+      var td2 =  document.createElement("td");
+      var td3 =  document.createElement("td");
+      td1.innerHTML =contentArray[i].name;
+      td2.innerHTML=contentArray[i].content;
+      td3.innerHTML=contentArray[i].date;
+      Box.appendChild(td1);
+      Box.appendChild(td2);
+      Box.appendChild(td3);
+      list_.appendChild(Box);
+    }
+
   });
 }

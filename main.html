@@ -29,7 +29,7 @@
         <input id="logout" class="loginsignup" type="button" name="logout" value="로그아웃" onclick="signOut()">
         <button type="button" id="sign-button" class="loginsignup">
        <div>
-         <a href="./signup.html"  id="sign-in">회원가입</a>
+         <div onclick="Register()">회원가입</div>
        </div>
       </button>
 
@@ -40,6 +40,25 @@
 
 <!-- ################################################################################################ -->
 <div class="wrapper row3">
+  <div id="addToDoView" style="display:none">
+  <div id="writingTransparentBorder"></div>
+  <div id="writingFormContainer" >
+      <div id="ximgBox">
+          <img id="ximg" src="images/delete.png" onclick="CloseAddToDo()" alt="noaddtodoview">
+      </div>
+      <div id="signIn" display="clear">
+      <div class ="reg"><label for="si_id">ID: </label><input type="email" id="su_id" /></div>
+      <div class ="reg"> <label for="si_pw">PW: </label><input type="password" id="su_pw" /></div>
+      <div class="reg"><label for="su_cf">PW Confirm: </label><input type="password" id="su_cf" /></div>
+      <div class ="signupbtn"> <button type="button" id="signinbutton">
+                      <div>
+                        <a id="log-in" onclick="signUp()">Sign up</a>
+                      </div>
+                 </button></div>
+
+      </div>
+  </div>
+</div>
   <main class="hoc container clear">
     <!-- main body -->
     <!-- ################################################################################################ -->
