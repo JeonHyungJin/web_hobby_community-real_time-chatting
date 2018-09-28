@@ -88,3 +88,28 @@ function signOut() {
     $("#error").show();
   });
 }
+
+function open_exercise(){
+  window.open("detail.html?category=excercise", "_self");
+}
+function open_movie(){
+  window.open("detail.html?category=movie", "_self");
+}
+function open_travel(){
+  window.open("detail.html?category=travel", "_self");
+}
+function open_drama(){
+  window.open("detail.html?category=drama", "_self");
+}
+function open_game(){
+  window.open("detail.html?category=game", "_self");
+}
+function open_music(){
+  window.open("detail.html?category=music", "_self");
+}
+function open_book(){
+  window.open("detail.html?category=book", "_self");
+}
+function open_computer(){
+  window.open("detail.html?category=computer", "_self");
+}
